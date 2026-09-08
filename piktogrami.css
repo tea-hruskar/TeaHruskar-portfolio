@@ -1,0 +1,13 @@
+/* Stilovi specifični za piktogramiMA.html. */
+
+.piktogrami-tijelo .projekt-ilustracija {
+  bottom: 78px;
+  width: 160px;
+}
+
+@media (max-width: 700px) {
+  .piktogrami-tijelo .projekt-ilustracija {
+    bottom: 32px;
+    width: 145px;
+  }
+}

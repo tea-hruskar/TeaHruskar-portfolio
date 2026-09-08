@@ -1,0 +1,115 @@
+.foto-prostor {
+  min-height: calc(100vh - 43px);
+  padding: 0 5.2% 100px;
+  background: var(--ljubicasta);
+}
+
+.foto-uvod {
+  display: grid;
+  min-height: 100px;
+  padding: 44px 24px 26px;
+  place-items: center;
+}
+
+.foto-citat {
+  max-width: 680px;
+  margin: 0;
+  color: var(--krem);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.foto-galerija {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  grid-auto-rows: min(479px, calc(41.0667vw - 2.5px));
+  column-gap: 12px;
+  row-gap: 18px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.foto-stavka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.foto-stavka:nth-child(4n + 1),
+.foto-stavka:nth-child(4n + 4) {
+  grid-column: span 11;
+}
+
+.foto-stavka:nth-child(4n + 2),
+.foto-stavka:nth-child(4n + 3) {
+  grid-column: span 5;
+}
+
+.foto-stavka:nth-child(4n + 1),
+.foto-stavka:nth-child(4n + 3) {
+  justify-content: flex-start;
+}
+
+.foto-stavka:nth-child(4n + 2),
+.foto-stavka:nth-child(4n + 4) {
+  justify-content: flex-end;
+}
+
+.foto-stavka img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 701px) and (max-width: 1099px) {
+  .foto-prostor {
+    padding: 0 7% 80px;
+  }
+
+  .foto-uvod {
+    min-height: 140px;
+  }
+
+  .foto-galerija {
+    grid-auto-rows: calc(39.4167vw - 2.5px);
+  }
+}
+
+@media (max-width: 700px) {
+  .foto-prostor {
+    min-height: calc(100vh - 64px);
+    padding: 0 22px 70px;
+  }
+
+  .foto-uvod {
+    min-height: 130px;
+    padding: 32px 16px 24px;
+  }
+
+  .foto-citat {
+    font-size: 17px;
+  }
+
+  .foto-galerija {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    row-gap: 20px;
+  }
+
+  .foto-stavka,
+  .foto-stavka:nth-child(n) {
+    display: block;
+    grid-column: auto;
+  }
+
+  .foto-stavka img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}

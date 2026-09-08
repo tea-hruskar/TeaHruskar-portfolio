@@ -1,0 +1,661 @@
+:root {
+  --ljubicasta: #a98cbc;
+  --crna: #3b373f;
+  --narancasta: #e2ae32;
+  --krem: #f9f0e0;
+  --bijela: #fff;
+  --font-sans: "Lexend", sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 1100px;
+  margin: 0;
+  background: var(--bijela);
+  color: var(--crna);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.zaglavlje {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 43px;
+  padding: 0 12px 0 14px;
+  background: var(--bijela);
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 14px;
+  display: block;
+  width: 130px;
+  cursor: pointer;
+  line-height: 0;
+  transform-origin: left bottom;
+  transition: transform 180ms ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.navigacija {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 59px;
+  font-size: 16px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.navigacija a {
+  color: var(--crna);
+  text-decoration: none;
+}
+
+.navigacija a:hover {
+  color: var(--narancasta);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 564px;
+  overflow: hidden;
+  background: var(--ljubicasta);
+}
+
+.pozadinske-rijeci {
+  position: absolute;
+  top: 18px;
+  left: -130px;
+  pointer-events: none;
+}
+
+.rijeci-traka {
+  display: flex;
+  width: max-content;
+  animation: klizanje-rijeci 173s linear infinite;
+  will-change: transform;
+}
+
+.rijeci-traka img {
+  display: block;
+  flex: 0 0 3700px;
+  width: 3700px;
+  height: auto;
+}
+
+@keyframes klizanje-rijeci {
+  to {
+    transform: translateX(-3700px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rijeci-traka {
+    animation: none;
+  }
+}
+
+.krug {
+  position: absolute;
+  top: -20px;
+  right: 48px;
+  width: 153px;
+  height: 153px;
+  border-radius: 50%;
+  background: var(--narancasta);
+}
+
+.uvod {
+  position: absolute;
+  top: 147px;
+  left: 8.1%;
+}
+
+.uvod h1 {
+  margin: 0;
+  font-size: 37px;
+  font-weight: 400;
+  letter-spacing: -1.4px;
+  line-height: 1.10;
+}
+
+.uvod h1 span {
+  color: var(--narancasta);
+  font-family: var(--font-serif);
+  font-size: 55px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -3px;
+}
+
+.uvod > p {
+  margin: 10px 0 0;
+  color: var(--bijela);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.rijec-dizajn {
+  position: absolute;
+  z-index: 1;
+  bottom: 51px;
+  left: 40.6%;
+  margin: 0;
+  color: var(--krem);
+  font-family: "Oi", serif;
+  font-size: 130px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.8;
+}
+
+.prijelaz-projekti {
+  position: absolute;
+  z-index: 0;
+  right: 3.1%;
+  bottom: 0;
+  left: 3.1%;
+  height: 54px;
+  border-top: 2px solid var(--crna);
+}
+
+.prijelaz-projekti p {
+  margin: 9px 0 0;
+  font-family: var(--font-serif);
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+
+/* projekti */
+.projekti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  padding: 32px 0 100px;
+  background: var(--bijela);
+}
+
+.kartica {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1100px;
+  color: var(--crna);
+  text-decoration: none;
+}
+
+.sazetak {
+  box-sizing: content-box;
+  flex-shrink: 0;
+  width: 220px;
+  padding-right: 25px;
+  text-align: right;
+  color: var(--narancasta);
+}
+
+.sazetak h2 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--ljubicasta);
+}
+
+.sazetak p {
+  margin: 7px 0 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.dodatne-informacije {
+  max-height: 0;
+  margin-top: 0;
+  color: var(--crna);
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s, margin-top 0.5s, opacity 0.3s;
+}
+
+.dodatne-informacije p {
+  margin: 0 0 20px;
+}
+
+.mockup {
+  flex-shrink: 0;
+  width: 580px;
+  height: 387px;
+  margin: 0;
+  overflow: hidden;
+  transition: width 0.5s, height 0.5s;
+}
+
+.mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.opis {
+  box-sizing: content-box;
+  flex-shrink: 0;
+  max-width: 0;
+  padding-left: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 16px;
+  line-height: 1.35;
+  transition: max-width 0.5s, padding-left 0.5s, opacity 0.3s;
+}
+
+.opis p {
+  width: 280px;
+  margin: 0 0 22px;
+}
+
+.kartica:hover .dodatne-informacije {
+  max-height: 200px;
+  margin-top: 28px;
+  opacity: 1;
+}
+
+.kartica:hover .opis {
+  max-width: 280px;
+  padding-left: 25px;
+  opacity: 1;
+}
+
+.kartica:hover .mockup {
+  width: 650px;
+  height: 433px;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.pogledaj-vise {
+  display: none;
+}
+
+/* TABLETI I MANJI EKRANI */
+@media (max-width: 1099px) {
+  body {
+    min-width: 0;
+  }
+
+  .pocetna-stranica .projekti {
+    display: block;
+    padding: 48px 8% 90px;
+  }
+
+  .pocetna-stranica .kartica {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: min(100%, 700px);
+    margin: 0 auto 86px;
+    color: var(--crna);
+  }
+
+  .pocetna-stranica .sazetak {
+    display: contents;
+  }
+
+  .pocetna-stranica .sazetak h2 {
+    order: 1;
+    margin: 0;
+    color: var(--ljubicasta);
+    font-size: 27px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .pocetna-stranica .sazetak > p {
+    order: 2;
+    margin: 4px 0 12px;
+    color: var(--narancasta);
+    font-size: 22px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .pocetna-stranica .mockup {
+    order: 3;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    transition: none;
+  }
+
+  .pocetna-stranica .mockup img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .pocetna-stranica .dodatne-informacije,
+  .pocetna-stranica .kartica:hover .dodatne-informacije {
+    order: 4;
+    max-height: none;
+    margin: 12px 0 0;
+    overflow: visible;
+    opacity: 1;
+    transition: none;
+  }
+
+  .pocetna-stranica .dodatne-informacije p {
+    margin: 0 0 34px;
+    color: var(--crna);
+    font-size: 22px;
+    line-height: 1.22;
+    text-align: left;
+  }
+
+  .pocetna-stranica .opis {
+    display: none;
+  }
+
+  .pocetna-stranica .pogledaj-vise {
+    display: block;
+    order: 5;
+    margin: -4px 0 0;
+    color: var(--ljubicasta);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .pocetna-stranica .kartica:hover .mockup {
+    width: 100%;
+    height: auto;
+  }
+
+  .pocetna-stranica .kartica:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+@media (min-width: 701px) and (max-width: 1099px) {
+  .pocetna-stranica .hero {
+    min-height: 520px;
+  }
+
+  .pocetna-stranica .krug {
+    top: -12px;
+    right: 38px;
+    width: 145px;
+    height: 145px;
+  }
+
+  .pocetna-stranica .uvod {
+    top: 135px;
+  }
+
+  .pocetna-stranica .uvod h1 {
+    font-size: 32px;
+  }
+
+  .pocetna-stranica .uvod h1 span {
+    font-size: 47px;
+  }
+
+  .pocetna-stranica .rijec-dizajn {
+    bottom: 48px;
+    left: 34%;
+    font-size: 80px;
+  }
+}
+
+/* Zajedničko mobilno zaglavlje i burger meni. */
+@media (max-width: 700px) {
+  body.stranica-s-burgerom {
+    min-width: 0;
+    --mobilna-boja-zaglavlja: var(--bijela);
+    --mobilna-boja-burgera: var(--ljubicasta);
+    --mobilna-boja-izbornika: var(--bijela);
+    --mobilna-boja-linka: var(--crna);
+    --mobilna-sjena-izbornika: 0 8px 14px rgb(59 55 63 / 12%);
+  }
+
+  .stranica-s-burgerom .stranica {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .stranica-s-burgerom .zaglavlje {
+    height: 64px;
+    padding: 0;
+    background: var(--mobilna-boja-zaglavlja);
+  }
+
+  .stranica-s-burgerom .logo {
+    top: 14px;
+    left: 28px;
+    width: 170px;
+  }
+
+  .stranica-s-burgerom .burger-menu {
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    display: block;
+    width: 48px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .stranica-s-burgerom .burger-menu span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin: 0 0 6px;
+    background: var(--mobilna-boja-burgera);
+  }
+
+  .stranica-s-burgerom .burger-menu span:last-child {
+    margin-bottom: 0;
+  }
+
+  .stranica-s-burgerom .navigacija {
+    position: absolute;
+    z-index: 4;
+    top: 64px;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 0;
+    padding: 22px 28px 26px;
+    background: var(--mobilna-boja-izbornika);
+    box-shadow: var(--mobilna-sjena-izbornika);
+  }
+
+  .stranica-s-burgerom .navigacija.otvoren {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stranica-s-burgerom .navigacija a {
+    color: var(--mobilna-boja-linka);
+    font-size: 19px;
+  }
+}
+
+/* MOBITEL – samo početna stranica */
+@media (max-width: 700px) {
+  .pocetna-stranica .hero {
+    min-height: 651px;
+  }
+
+  .pocetna-stranica .pozadinske-rijeci {
+    top: 52px;
+    left: -130px;
+  }
+
+  .pocetna-stranica .rijeci-traka {
+    animation: none;
+  }
+
+  .pocetna-stranica .krug {
+    top: 20px;
+    right: -34px;
+    width: 190px;
+    height: 190px;
+  }
+
+  .pocetna-stranica .uvod {
+    top: 223px;
+    right: 24px;
+    left: 42px;
+  }
+
+  .pocetna-stranica .uvod h1 {
+    font-size: 35px;
+    letter-spacing: -1.4px;
+    line-height: 1.12;
+  }
+
+  .pocetna-stranica .uvod h1 br {
+    display: none;
+  }
+
+  .pocetna-stranica .uvod h1 span {
+    font-size: 52px;
+  }
+
+  .pocetna-stranica .uvod > p {
+    max-width: 370px;
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  .pocetna-stranica .rijec-dizajn {
+    bottom: 64px;
+    left: 31%;
+    font-size: 92px;
+  }
+
+  .pocetna-stranica .prijelaz-projekti {
+    right: 22px;
+    left: 22px;
+    height: 62px;
+  }
+
+  .pocetna-stranica .prijelaz-projekti p {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .pocetna-stranica .projekti {
+    padding: 42px 24px 70px;
+  }
+
+  .pocetna-stranica .kartica {
+    width: 100%;
+    margin: 0 0 76px;
+  }
+
+}
+
+/* Mali mobiteli, primjerice uređaji širine 320–380 px. */
+@media (max-width: 380px) {
+  .stranica-s-burgerom .logo {
+    left: 22px;
+    width: 155px;
+  }
+
+  .stranica-s-burgerom .burger-menu {
+    top: 20px;
+    right: 22px;
+    width: 42px;
+  }
+
+  .stranica-s-burgerom .burger-menu span {
+    height: 4px;
+    margin-bottom: 5px;
+  }
+
+  .pocetna-stranica .hero {
+    min-height: 620px;
+  }
+
+  .pocetna-stranica .krug {
+    right: -42px;
+    width: 165px;
+    height: 165px;
+  }
+
+  .pocetna-stranica .uvod {
+    top: 210px;
+    right: 18px;
+    left: 28px;
+  }
+
+  .pocetna-stranica .uvod h1 {
+    font-size: 31px;
+  }
+
+  .pocetna-stranica .uvod h1 span {
+    font-size: 45px;
+  }
+
+  .pocetna-stranica .uvod > p {
+    font-size: 17px;
+  }
+
+  .pocetna-stranica .rijec-dizajn {
+    bottom: 63px;
+    left: 24%;
+    font-size: 72px;
+  }
+
+  .pocetna-stranica .projekti {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .pocetna-stranica .sazetak h2 {
+    font-size: 25px;
+  }
+
+  .pocetna-stranica .sazetak > p,
+  .pocetna-stranica .dodatne-informacije p {
+    font-size: 20px;
+  }
+}

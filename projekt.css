@@ -1,0 +1,277 @@
+/* zajednički stil za sve "more about" stranice */
+
+.projekt-tijelo {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.projekt-tijelo .stranica {
+  height: 100vh;
+}
+
+.projekt-tijelo .zaglavlje {
+  z-index: 5;
+}
+
+.projekt-tijelo .navigacija a {
+  color: var(--crna);
+}
+
+.projekt-tijelo .navigacija a:hover {
+  color: var(--narancasta);
+}
+
+.projekt-prostor {
+  display: flex;
+  height: calc(100vh - 43px);
+}
+
+.projekt-panel {
+  position: relative;
+  flex: 0 0 28.5%;
+  height: 100%;
+  overflow: hidden;
+  padding: 86px 20px 52px;
+  background: var(--ljubicasta);
+}
+
+.projekt-vrsta {
+  margin: 0;
+  color: var(--krem);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.projekt-info h1 {
+  margin: 5px 0 0;
+  color: var(--krem);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.7px;
+  line-height: 1.18;
+}
+
+.projekt-opis {
+  margin: 10px 0 0;
+  color: var(--crna);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1.04;
+}
+
+.projekt-ilustracija {
+  position: absolute;
+  bottom: 64px;
+  left: calc(50% - 8px);
+  width: 140px;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.francek-tijelo .projekt-ilustracija {
+  bottom: 70px;
+  width: 85px;
+}
+
+.projekt-sadrzaj {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--bijela);
+}
+
+.projekt-sadrzaj-unutra {
+  width: var(--projekt-sadrzaj-sirina, 590px);
+  margin: 0 auto;
+  padding: 0 0 100px;
+}
+
+.projekt-slika,
+.projekt-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 30px;
+}
+
+.projekt-tekst,
+.projekt-samostalni-tekst {
+  margin: 0 0 30px;
+  color: var(--crna);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 1.12;
+}
+
+.projekt-tekst h2 {
+  margin: 0 0 6px;
+  color: var(--ljubicasta);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.projekt-tekst p {
+  margin: 0 0 10px;
+}
+
+.projekt-tekst p:last-child {
+  margin-bottom: 0;
+}
+
+.projekt-sadrzaj .istaknuto {
+  color: var(--narancasta);
+}
+
+.projekt-slika-uzak {
+  width: 84%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.projekt-slika-zadnja {
+  margin-bottom: 0;
+}
+
+@media (min-width: 701px) {
+  .projekt-video {
+    width: auto;
+    max-width: 100%;
+    max-height: 520px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* tablet*/
+@media (min-width: 701px) and (max-width: 1099px) {
+  .projekt-panel {
+    flex-basis: 31%;
+    padding: 70px 18px 48px;
+  }
+
+  .projekt-info h1 {
+    font-size: 19px;
+  }
+
+  .projekt-opis {
+    font-size: 17px;
+  }
+
+  .projekt-ilustracija {
+    bottom: 48px;
+    width: 130px;
+  }
+
+  .francek-tijelo .projekt-ilustracija {
+    bottom: 58px;
+    width: 75px;
+  }
+
+  .projekt-sadrzaj-unutra {
+    width: calc(100% - 44px);
+    max-width: 590px;
+    padding-bottom: 80px;
+  }
+}
+
+/* mobitel */
+@media (max-width: 700px) {
+  body.projekt-tijelo {
+    height: auto;
+    overflow: visible;
+  }
+
+  .projekt-tijelo .stranica {
+    height: auto;
+  }
+
+  .projekt-prostor {
+    display: block;
+    height: auto;
+  }
+
+  .projekt-panel {
+    min-height: 242px;
+    height: auto;
+    padding: 52px 24px 36px;
+  }
+
+  .slikovnica-tijelo .projekt-panel {
+    min-height: 520px;
+  }
+
+  .piktogrami-tijelo .projekt-panel {
+    min-height: 360px;
+  }
+
+  .francek-tijelo .projekt-panel {
+    min-height: 430px;
+  }
+
+  .projekt-vrsta {
+    font-size: 14px;
+  }
+
+  .projekt-info h1 {
+    font-size: 27px;
+    line-height: 1.16;
+  }
+
+  .projekt-opis {
+    max-width: 330px;
+    font-size: 17px;
+    line-height: 1.12;
+  }
+
+  .projekt-ilustracija {
+    bottom: 24px;
+    width: 125px;
+  }
+
+  .francek-tijelo .projekt-ilustracija {
+    bottom: 32px;
+    width: 80px;
+  }
+
+  .projekt-sadrzaj {
+    height: auto;
+    overflow: visible;
+  }
+
+  .projekt-sadrzaj-unutra {
+    width: 100%;
+    padding: 30px 22px 70px;
+  }
+
+  .projekt-slika,
+  .projekt-video {
+    margin-bottom: 24px;
+  }
+
+  .projekt-tekst,
+  .projekt-samostalni-tekst {
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .projekt-tekst h2 {
+    margin-bottom: 7px;
+    font-size: 18px;
+  }
+
+  .projekt-slika-uzak {
+    width: 90%;
+  }
+}

@@ -1,0 +1,136 @@
+/* Stilovi samo za kontakt.html */
+
+.kontakt-tijelo .zaglavlje {
+  background: var(--ljubicasta);
+}
+
+.kontakt-tijelo .logo img {
+  filter: brightness(0) invert(1);
+}
+
+.kontakt-tijelo .navigacija a {
+  color: var(--bijela);
+}
+
+.kontakt-tijelo .navigacija a:hover {
+  color: var(--krem);
+}
+
+.kontakt-prostor {
+  position: relative;
+  min-height: calc(100vh - 43px);
+  overflow: hidden;
+  padding: 67px 5.2% 48px;
+  background: var(--bijela);
+}
+
+.kontakt-sadrzaj {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.kontakt-sadrzaj h1 {
+  margin: 0;
+  color: var(--narancasta);
+  font-family: var(--font-sans);
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+}
+
+.kontakt-uvod,
+.kontakt-podatak,
+.kontakt-lokacija {
+  color: var(--crna);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1.22;
+}
+
+.kontakt-uvod {
+  margin: 0;
+}
+
+.kontakt-podaci {
+  margin-top: 27px;
+}
+
+.kontakt-podatak {
+  margin: 0 0 27px;
+}
+
+.kontakt-podatak a {
+  display: block;
+  color: var(--narancasta);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+}
+
+.kontakt-podatak a:hover {
+  text-decoration: underline;
+}
+
+.kontakt-lokacija {
+  margin: 0;
+}
+
+.kontakt-val {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+  background: var(--ljubicasta);
+  clip-path: polygon(0 73%, 10% 64%, 22% 56%, 34% 51%, 48% 50%, 60% 45%, 72% 36%, 82% 25%, 88% 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* MOBITEL */
+@media (max-width: 700px) {
+  body.kontakt-tijelo {
+    --mobilna-boja-zaglavlja: var(--ljubicasta);
+    --mobilna-boja-burgera: var(--bijela);
+    --mobilna-boja-izbornika: var(--ljubicasta);
+    --mobilna-boja-linka: var(--bijela);
+    --mobilna-sjena-izbornika: 0 8px 14px rgb(59 55 63 / 18%);
+  }
+
+  .kontakt-prostor {
+    min-height: calc(100vh - 64px);
+    padding: 50px 28px 265px;
+  }
+
+  .kontakt-sadrzaj h1 {
+    font-size: 27px;
+  }
+
+  .kontakt-uvod,
+  .kontakt-podatak,
+  .kontakt-lokacija {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .kontakt-podaci {
+    margin-top: 31px;
+  }
+
+  .kontakt-podatak {
+    margin-bottom: 29px;
+  }
+
+  .kontakt-podatak a {
+    font-size: 19px;
+  }
+
+  .kontakt-val {
+    height: 300px;
+  }
+}

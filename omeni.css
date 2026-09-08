@@ -1,0 +1,164 @@
+
+
+.omeni-prostor {
+  position: relative;
+  min-height: calc(100vh - 43px);
+  overflow: hidden;
+  padding: 50px 0 36px;
+  background: var(--ljubicasta);
+}
+
+.omeni-kartica {
+  position: relative;
+  width: 58%;
+  min-height: 420px;
+  margin: 0 auto;
+  padding: 30px 20px 62px;
+  background: var(--bijela);
+  transform: translateX(-10px);
+}
+
+.omeni-kartica h1,
+.omeni-kontakt,
+.cv-papiric {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+}
+
+.omeni-kartica h1 {
+  margin: 0 0 4px;
+  color: var(--ljubicasta);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.omeni-tekst {
+  max-width: 625px;
+}
+
+.omeni-tekst p {
+  margin: 0 0 11px;
+  color: var(--crna);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  line-height: 1.1;
+}
+
+.omeni-tekst p:last-child {
+  margin-bottom: 0;
+}
+
+.omeni-kontakt {
+  position: absolute;
+  right: 47px;
+  bottom: 27px;
+  margin: 0;
+  color: var(--ljubicasta);
+  font-size: 31px;
+  line-height: 1;
+}
+
+.cv-papiric {
+  position: absolute;
+  z-index: 1;
+  top: 263px;
+  left: calc(79% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  min-height: 114px;
+  padding: 18px;
+  color: var(--crna);
+  background: var(--krem);
+  box-shadow: 0 5px 12px rgb(59 55 63 / 18%);
+  font-size: 31px;
+  line-height: 1;
+  text-decoration: none;
+  transform: rotate(-5deg);
+  transform-origin: center;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cv-papiric:hover,
+.cv-papiric:focus-visible {
+  box-shadow: 0 7px 16px rgb(59 55 63 / 24%);
+  transform: rotate(-5deg) scale(1.04);
+}
+
+/* tablet */
+@media (min-width: 701px) and (max-width: 1099px) {
+  .omeni-prostor {
+    padding: 48px 0 42px;
+  }
+
+  .omeni-kartica {
+    width: 68%;
+    transform: translateX(-6px);
+  }
+
+  .cv-papiric {
+    top: 244px;
+    left: calc(79% - 54px);
+    width: 210px;
+    min-height: 110px;
+  }
+}
+
+/* mobitel */
+@media (max-width: 700px) {
+  .omeni-prostor {
+    min-height: calc(100vh - 64px);
+    overflow: visible;
+    padding: 30px 22px 70px;
+  }
+
+  .omeni-kartica {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 26px 20px 28px;
+    transform: none;
+  }
+
+  .omeni-kartica h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+  }
+
+  .omeni-tekst {
+    max-width: none;
+  }
+
+  .omeni-tekst p {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .omeni-kontakt {
+    position: static;
+    margin: 22px 7px 0 0;
+    font-size: 30px;
+    text-align: right;
+  }
+
+  .cv-papiric {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 200px;
+    min-height: 104px;
+    margin: -10px 14px 0 auto;
+    padding: 16px;
+    font-size: 28px;
+    transform: rotate(-4deg);
+  }
+
+  .cv-papiric:hover,
+  .cv-papiric:focus-visible {
+    transform: rotate(-4deg) scale(1.04);
+  }
+}
